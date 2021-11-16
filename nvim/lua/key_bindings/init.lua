@@ -16,3 +16,10 @@ map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", options)
 map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", options)
 map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", options)
 map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", options)
+
+-- VGit
+map("n", "<leader>gb", "<cmd>VGit buffer_blame_preview<cr>", options)
+map("n", "<leader>gp", "<cmd>VGit buffer_diff_preview<cr>", options)
+map("n", "<leader>gd", "<cmd>VGit project_diff_preview<cr>", options)
+map("n", "<leader>gs", "<cmd>VGit buffer_hunk_stage<cr>", options)
+map("n", "<leader>gh", "<cmd>VGit project_hunks_qf<cr>", options)
