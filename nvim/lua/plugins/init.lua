@@ -7,6 +7,10 @@ return require("packer").startup(function()
 	use("wbthomason/packer.nvim")
 	use("folke/tokyonight.nvim")
 	use("sbdchd/neoformat")
+	use("ggandor/lightspeed.nvim")
+	use("simrat39/symbols-outline.nvim")
+	use("b3nj5m1n/kommentary")
+	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
 
 	use({
 		"neovim/nvim-lspconfig",
@@ -54,22 +58,26 @@ return require("packer").startup(function()
 	})
 
 	use({
-		"tanvirtin/vgit.nvim",
-		event = "BufWinEnter",
-		requires = {
-			"nvim-lua/plenary.nvim",
-		},
+		"pwntester/octo.nvim",
 		config = function()
-			require("vgit").setup({
-				hls = require("vgit").themes.tokyonight,
-			})
+			require("octo").setup()
 		end,
 	})
 
 	use({
-		"pwntester/octo.nvim",
+		"windwp/nvim-autopairs",
 		config = function()
-			require("octo").setup()
+			require("nvim-autopairs").setup({})
+		end,
+	})
+
+	use({
+		"lewis6991/gitsigns.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
+		config = function()
+			require("gitsigns").setup()
 		end,
 	})
 end)

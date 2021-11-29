@@ -46,6 +46,12 @@ nvim_lsp.elixirls.setup({
 	on_attach = on_attach,
 })
 
+require("lspconfig").gopls.setup({
+	capabilities = capabilities,
+	cmd = { "gopls", "--remote=auto" },
+	on_attach = on_attach,
+})
+
 -- luasnip setup
 local luasnip = require("luasnip")
 
