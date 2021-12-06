@@ -80,4 +80,11 @@ return require("packer").startup(function()
 			require("gitsigns").setup()
 		end,
 	})
+
+	use({
+		"VonHeikemen/searchbox.nvim",
+		requires = {
+			{ "MunifTanjim/nui.nvim" },
+		},
+	})
 end)
